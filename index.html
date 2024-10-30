@@ -73,6 +73,32 @@
             color: #555;
         }
 
+        /* Timeline Styling */
+        .timeline {
+            display: flex;
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #007acc;
+        }
+
+        .timeline-entry {
+            margin: 20px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-entry:before {
+            content: '';
+            position: absolute;
+            left: -13px;
+            top: 0;
+            height: 10px;
+            width: 10px;
+            background-color: #007acc;
+            border-radius: 50%;
+        }
+
         /* Footer styling */
         footer {
             text-align: center;
@@ -104,6 +130,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -124,11 +151,26 @@
         <!-- Publications Section -->
         <section id="publications">
             <h2>Publications</h2>
-            <p>A list of your publications, presentations, or conference papers. You can add links to each publication if available. For example:</p>
-            <ul>
-                <li>Author, A. & Co-author, B. (Year). Title of the Paper. <em>Journal Name</em>, Volume(Issue), Pages.</li>
-                <!-- Add more publications as needed -->
-            </ul>
+            <p>Coming soon...</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <h3>Bachelor's Degree</h3>
+                    <p>University of Padua - Information Engineering (2018-2021)</p>
+                </div>
+                <div class="timeline-entry">
+                    <h3>Master's Degree</h3>
+                    <p>University of Padua - Computer Engineering, AI and Robotics (2021-2024)</p>
+                </div>
+                <div class="timeline-entry">
+                    <h3>PhD</h3>
+                    <p>University of Trento - Information Engineering and Science (2024-present)</p>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
@@ -140,7 +182,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2024 Giacomo Gonella. All Rights Reserved.</p>
     </footer>
 
 </body>
