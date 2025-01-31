@@ -3,189 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giacomo Gonella</title>
+    <title>Your Name - Personal Website</title>
     <style>
-        /* Basic reset and styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header, nav, main, footer {
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
+            line-height: 1.6;
         }
-
-        /* Header section */
         header {
             text-align: center;
-            padding: 20px 0;
         }
-
-        header h1 {
-            font-size: 2.5em;
-            color: #333;
+        img {
+            max-width: 150px;
+            border-radius: 50%;
         }
-
-        header p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Navigation bar */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #007acc;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Sections styling */
         section {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        section h2 {
-            color: #007acc;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        section p {
-            color: #555;
-        }
-
-        /* Vertical Timeline Styling */
-        .timeline {
-            position: relative;
-            margin-left: 20px;
-            padding-left: 20px;
-        }
-
-        .timeline-entry {
-            position: relative;
-            margin: 20px 0;
-            padding-left: 40px; /* Space for the dot */
-        }
-
-        .timeline-entry:before {
-            content: '';
-            position: absolute;
-            left: 10px; /* Position of the dot */
-            top: 10px; /* Adjust based on your design */
-            height: 10px;
-            width: 10px;
-            background-color: #007acc;
-            border-radius: 50%; /* Circle */
-        }
-
-        .timeline-entry h3 {
-            margin-bottom: 5px;
-        }
-
-        /* Footer styling */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: #777;
-            font-size: 0.9em;
-        }
-
-        footer a {
-            color: #007acc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <h1>Giacomo Gonella</h1>
-        <p>PhD Student</p>
+        <img src="your-photo.jpg" alt="Your Photo">
+        <h1>Your Name</h1>
+        <p>PhD Student in [Your Field]</p>
     </header>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>From a young age, I have had a deep passion for the latest scientific discoveries, especially in the field of technological innovation. During my academic career, which includes both Information Engineering and Computer Engineering, I have specialized in the field of Artificial Intelligence, with a particular focus on Natural Language Processing - a field that fascinates me and that I consider to be crucial for the future of technology.</p>
-        </section>
-
-        <!-- Research Section -->
-        <section id="research">
-            <h2>Research</h2>
-            <p>Describe your research interests, key projects, and any collaborations. This section can include a short overview of your current research focus and methods.</p>
-        </section>
-
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>Coming soon...</p>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-entry">
-                    <h3>Bachelor's Degree</h3>
-                    <p>University of Padua - Information Engineering (2018-2021)</p>
-                </div>
-                <div class="timeline-entry">
-                    <h3>Master's Degree</h3>
-                    <p>University of Padua - Computer Engineering, AI and Robotics (2021-2024)</p>
-                </div>
-                <div class="timeline-entry">
-                    <h3>PhD</h3>
-                    <p>University of Trento - Information Engineering and Science (2024-present)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:ggonella@fbk.eu">ggonella@fbk.eu</a> or find me on <a href="https://www.linkedin.com/in/giacomogonella">LinkedIn</a>.</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Giacomo Gonella. All Rights Reserved.</p>
-    </footer>
-
+    
+    <section id="bio">
+        <h2>About Me</h2>
+        <p>Brief biography about yourself, your research interests, and background.</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p>[Your degrees and institutions]</p>
+    </section>
+    
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li><a href="#">Title of Paper 1</a>, Journal/Conference, Year</li>
+            <li><a href="#">Title of Paper 2</a>, Journal/Conference, Year</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Socials: <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
+    </section>
 </body>
 </html>
