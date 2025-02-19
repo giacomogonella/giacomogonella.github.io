@@ -21,12 +21,13 @@
         }
         .left {
             width: 30%;
-            text-align: center;
+            text-align: left;
             padding-right: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             border-right: 2px solid #ddd;
+            padding-left: 20px;
         }
         .left img {
             width: 150px;
@@ -36,21 +37,26 @@
         }
         .contact {
             margin-top: 15px;
+            margin-left: 20px;
         }
         .social-icons {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
             gap: 10px;
             margin-top: 10px;
-            flex-wrap: wrap;
+            margin-left: 20px;
         }
         .social-icons a {
+            display: flex;
+            align-items: center;
             text-decoration: none;
             color: #0073e6;
         }
         .social-icons img {
             width: 24px;
             height: 24px;
+            margin-right: 10px;
         }
         .right {
             width: 70%;
@@ -69,14 +75,12 @@
             <img src="images/avatar.png" alt="Giacomo Gonella">
             <div class="contact">
                 <h3>Contact</h3>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
                 <div class="social-icons">
-                    <a href="https://github.com/yourhandle" target="_blank"><img src="images/svgs/github.svg" alt="GitHub"></a>
-                    <a href="https://x.com/yourhandle" target="_blank"><img src="images/svgs/x.svg" alt="Twitter"></a>
-                    <a href="https://bsky.app/profile/yourhandle" target="_blank"><img src="images/svgs/bluesky.svg" alt="Bluesky"></a>
-                    <a href="https://orcid.org/yourid" target="_blank"><img src="images/svgs/orcid.svg" alt="ORCID"></a>
-                    <a href="https://scholar.google.com/citations?user=yourid" target="_blank"><img src="images/svgs/scholar.svg" alt="Google Scholar"></a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="images/svgs/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="mailto:your.email@example.com"><img src="images/svgs/email.svg" alt="Email">Email</a>
+                    <a href="https://github.com/giacomogonella" target="_blank"><img src="images/svgs/github.svg" alt="GitHub">GitHub</a>
+                    <a href="https://x.com/giacogon" target="_blank"><img src="images/svgs/x.svg" alt="Twitter">Twitter</a>
+                    <a href="https://bsky.app/profile/ggonella" target="_blank"><img src="images/svgs/bluesky.svg" alt="Bluesky">Bluesky</a>
+                    <a href="https://linkedin.com/in/giacomogonella" target="_blank"><img src="images/svgs/linkedin.svg" alt="LinkedIn">LinkedIn</a>
                 </div>
             </div>
         </div>
