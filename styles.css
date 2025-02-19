@@ -72,3 +72,30 @@ body {
 h2 {
     margin-bottom: 10px;
 }
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+}
+
+.year {
+    font-weight: bold;
+    min-width: 80px; /* Adjust spacing */
+    text-align: right;
+    margin-right: 10px;
+}
+
+.separator {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.timeline-content {
+    font-size: 1rem;
+}
