@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Giacomo Gonella - PhD Student</title>
-
-  <!-- Basic SEO -->
-  <meta
-    name="description"
-    content="Official webpage of Giacomo Gonella, PhD student at DISI, specializing in NLP for Crisis/Emergency Management."
-  />
-
-  <!-- Open Graph (Social Sharing) -->
-  <meta property="og:title" content="Giacomo Gonella - PhD Student" />
-  <meta
-    property="og:description"
-    content="NLP researcher specializing in Crisis/Emergency Management."
-  />
-  <meta property="og:image" content="images/avatar.png" />
-  <meta property="og:url" content="https://www.example.com" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Giacomo Gonella - PhD Student</title>
+    
+    <!-- Basic SEO -->
+    <meta
+      name="description"
+      content="Official webpage of Giacomo Gonella, PhD student at DISI, specializing in NLP for Crisis/Emergency Management."
+    />
+  
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Giacomo Gonella - PhD Student" />
+    <meta
+      property="og:description"
+      content="NLP researcher specializing in Crisis/Emergency Communication."
+    />
+    <meta property="og:image" content="images/avatar.png" />
+    <meta property="og:url" content="https://www.example.com" />
+  
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
 <body>
   <div class="container">
     <!-- Left Column -->
     <div class="left">
-      <img
-        src="images/avatar.png"
-        alt="Giacomo Gonella"
-        class="avatar"
-      />
+      <img src="images/avatar.png" alt="Giacomo Gonella" class="avatar" />
       <h1>Giacomo Gonella</h1>
       <p>PhD Student - FBK</p>
 
@@ -45,39 +45,25 @@
         <h2>Contact</h2>
         <div class="social-icons">
           <a href="mailto:ggonella@fbk.eu">
-            <img
-              src="images/svgs/email.svg"
-              alt="Email icon"
-            />
-            Email
-          </a>
-          <a href="https://github.com/giacomogonella" target="_blank">
-            <img
-              src="images/svgs/github.svg"
-              alt="GitHub icon"
-            />
-            GitHub
+            <img src="images/svgs/email.svg" alt="Email" />
           </a>
           <a href="https://x.com/giacogon" target="_blank">
-            <img
-              src="images/svgs/x.svg"
-              alt="Twitter icon"
-            />
-            Twitter
+            <img src="images/svgs/x.svg" alt="X" />
           </a>
           <a href="https://bsky.app/profile/ggonella" target="_blank">
-            <img
-              src="images/svgs/bluesky.svg"
-              alt="Bluesky icon"
-            />
-            Bluesky
+            <img src="images/svgs/bluesky.svg" alt="Bluesky" />
+          </a>
+          <a href="https://bsky.app/profile/ggonella" target="_blank">
+            <img src="images/svgs/orcid.svg" alt="ORCiD" />
+          </a>
+          <a href="https://bsky.app/profile/ggonella" target="_blank">
+            <img src="images/svgs/scholar.svg" alt="Google Scholar" />
+          </a>
+          <a href="https://github.com/giacomogonella" target="_blank">
+            <img src="images/svgs/github.svg" alt="GitHub" />
           </a>
           <a href="https://linkedin.com/in/giacomogonella" target="_blank">
-            <img
-              src="images/svgs/linkedin.svg"
-              alt="LinkedIn icon"
-            />
-            LinkedIn
+            <img src="images/svgs/linkedin.svg" alt="LinkedIn" />
           </a>
         </div>
       </div>
@@ -86,7 +72,6 @@
     <!-- Right Column -->
     <div class="right">
       <h2>About Me</h2>
-      <!-- Split the text into two paragraphs for better readability -->
       <p>
         From a young age, I have been passionate about scientific discoveries, particularly in technological innovation.
         My academic journey in Information and Computer Engineering led me to specialize in Artificial Intelligence, with a strong focus on Natural Language Processing.
@@ -118,5 +103,18 @@
       <p>Coming soon...</p>
     </div>
   </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Giacomo Gonella. All rights reserved.</p>
+    <p>Opinions expressed on this website are my own and do not necessarily reflect those of my institution.</p>
+    <p id="last-updated"></p>
+    <p><a href="#">↑ Back to Top</a></p>
+  </footer>
+
+  <!-- JavaScript to Auto-Update the Last Updated Date -->
+  <script>
+    document.getElementById("last-updated").innerText = "Last updated: " + new Date().toLocaleDateString();
+  </script>
 </body>
 </html>

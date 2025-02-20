@@ -44,6 +44,7 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.3); /* Soft dark gray shadow */
 }
 
 /* Contact Section */
@@ -55,31 +56,27 @@ body {
   align-items: center;
 }
 
+/* Social Icons in a Row */
 .social-icons {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
+  flex-wrap: wrap; /* Allows icons to move to a new line if needed */
+  justify-content: center;
+  gap: 0.8rem; /* Adjust spacing between icons */
+  max-width: 100%; /* Ensures they don't overflow */
 }
 
 .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #0073e6;
-  transition: background-color 0.2s ease;
-  border-radius: 4px;
-  padding: 4px 0;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  background-color: #eef;
+  transform: scale(1.1);
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 28px; 
+  height: 28px;
 }
 
 /* Right Column */
@@ -184,4 +181,22 @@ p {
   .timeline {
     padding-left: 20px;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
