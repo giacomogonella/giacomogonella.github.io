@@ -1,163 +1,187 @@
 /* Fonts & Basic Resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  /* Container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* ensures full height if needed */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* Changed background color to white to avoid color split */
+  background-color: #fff;
+  color: #333;
+  /* no extra margin/padding on body */
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  /* container is naturally as tall as content; 
+     you could also do min-height: 100vh; if you want it to fill the screen */
+}
+
+/* Left Column */
+.left {
+  width: 20%;
+  text-align: center;
+  padding: 0 20px;
+  border-right: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Contact Section */
+.contact {
+  /* Removed margin-top: auto to keep Contact below PhD Student */
+  margin-top: 1rem; /* you can adjust spacing here as desired */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0073e6;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+  padding: 4px 0;
+}
+
+.social-icons a:hover {
+  background-color: #eef;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* Right Column */
+.right {
+  /* max-width to improve readability (limit line length) */
+  width: 80%;
+  max-width: 700px; 
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs: increase line-height for readability */
+p {
+  line-height: 1.6;
+}
+
+/* New Bullet Timeline Styles */
+.timeline {
+  position: relative;
+  list-style-type: none;
+  max-width: 600px;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px; 
+  top: 0;
+  width: 2px;
+  background-color: #ccc;
+  height: 100%;
+}
+
+.timeline li {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.timeline li::before {
+  content: "●";
+  position: absolute;
+  left: 12px; 
+  font-size: 18px;
+  color: #333;
+  top: 0;
+  transform: translateY(0%);
+}
+
+.timeline li h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline li span {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.timeline li p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive Design (Mobile) */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    width: 100%;
-    background: #fff;
-    padding: 40px;
-  }
-  
-  /* Left Column */
-  .left {
-    width: 20%;
-    text-align: center;
-    padding: 0 20px;
-    border-right: 2px solid #ddd;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    padding: 20px;
   }
-  
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  /* Contact Section */
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: auto;
-  }
-  
-  .social-icons {
-    /* Use a column layout so links stack vertically */
-    display: flex;
-    flex-direction: column;
-    /* Align everything to the start of each row (left edge) */
-    align-items: flex-start;
-    /* Add vertical spacing between each link */
-    gap: 0.5rem;
-  }
-  
-  .social-icons a {
-    /* Inline-flex helps icon and text align nicely on one line */
-    display: inline-flex;
-    align-items: center;
-    /* Spacing and appearance tweaks */
-    padding: 4px 0;
-    text-decoration: none;
-    color: #0073e6;
-    transition: background-color 0.2s ease;
-    border-radius: 4px;
-  }
-  
-  .social-icons a:hover {
-    background-color: #eef;
-  }
-  
-  /* Ensure icons have a fixed size and leave consistent space on the right */
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
-  
-  
-  /* Right Column */
+
+  .left,
   .right {
-    width: 80%;
-    padding-left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+    border-right: none;
   }
-  
-  /* Headings */
-  h1 {
-    font-size: 1.8rem;
-    margin-top: 0.5rem;
+
+  .left {
+    margin-bottom: 2rem;
   }
-  
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Timeline */
+
   .timeline {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-left: 80px; /* space for the vertical line and year */
-    gap: 1.5rem;
+    padding-left: 20px;
   }
-  
-  .timeline-item {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-  }
-  
-  .year {
-    font-weight: bold;
-    min-width: 70px;
-    text-align: right;
-    margin-right: 15px;
-  }
-  
-  .bar {
-    position: relative;
-    width: 2px;
-    background: #000;
-    min-height: 100%;
-    margin-right: 15px;
-  }
-  
-  .bar.end {
-    height: 20px; /* stops the line at the last item */
-  }
-  
-  .timeline-content {
-    font-size: 1rem;
-  }
-  
-  /* Responsive Design (Mobile) */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .left,
-    .right {
-      width: 100%;
-      padding: 0;
-      border-right: none;
-    }
-  
-    .left {
-      margin-bottom: 2rem;
-    }
-  
-    .timeline {
-      padding-left: 20px;
-    }
-  }
-  
+}
