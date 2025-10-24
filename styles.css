@@ -200,3 +200,62 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.pub-title a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  text-decoration: underline;
+}
+
+.pub-authors {
+  margin-top: 0.25rem;
+  color: #555;
+}
+
+.pub-meta {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.pub-links {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.95rem;
+}
+
+.pub-links a {
+  text-decoration: none;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+.pub-title a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  text-decoration: underline;
+}
