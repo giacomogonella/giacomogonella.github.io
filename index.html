@@ -2,133 +2,259 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Giacomo Gonella - PhD Student</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giacomo Gonella — PhD Student</title>
+
     <!-- Basic SEO -->
     <meta
       name="description"
-      content="Official webpage of Giacomo Gonella, PhD student at DISI, specializing in NLP for Crisis/Emergency Management."
+      content="Official webpage of Giacomo Gonella, PhD student at FBK and DISI, University of Trento, specializing in NLP for Crisis/Emergency Management."
     />
-  
+
     <!-- Open Graph (Social Sharing) -->
-    <meta property="og:title" content="Giacomo Gonella - PhD Student" />
+    <meta property="og:title" content="Giacomo Gonella — PhD Student" />
     <meta
       property="og:description"
       content="NLP researcher specializing in Crisis/Emergency Communication."
     />
-    <meta property="og:image" content="images/avatar.png" />
-    <meta property="og:url" content="https://www.example.com" />
-  
+    <meta property="og:image" content="https://giacomogonella.github.io/images/avatar.jpg" />
+    <meta property="og:url" content="https://giacomogonella.github.io" />
+
     <!-- Favicons -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
       rel="stylesheet"
     />
-  
+
     <link rel="stylesheet" href="styles.css" />
   </head>
-  
-<body>
-  <div class="container">
-    <!-- Left Column -->
-    <div class="left">
-      <img src="images/avatar.png" alt="Giacomo Gonella" class="avatar" />
-      <h1>Giacomo Gonella</h1>
-      <p>PhD Student - FBK</p>
 
-      <div class="contact">
-        <h2>Contact</h2>
-        <div class="social-icons">
-          <a href="mailto:ggonella@fbk.eu">
-            <img src="images/svgs/email.svg" alt="Email" />
-          </a>
-          <a href="https://x.com/giacogon" target="_blank">
-            <img src="images/svgs/x.svg" alt="X" />
-          </a>
-          <a href="https://bsky.app/profile/ggonella" target="_blank">
-            <img src="images/svgs/bluesky.svg" alt="Bluesky" />
-          </a>
-          <!-- <a href="https://bsky.app/profile/ggonella" target="_blank">
-            <img src="images/svgs/orcid.svg" alt="ORCiD" />
-          </a>
-          <a href="https://bsky.app/profile/ggonella" target="_blank">
-            <img src="images/svgs/scholar.svg" alt="Google Scholar" />
-          </a> -->
-          <a href="https://github.com/giacomogonella" target="_blank">
-            <img src="images/svgs/github.svg" alt="GitHub" />
-          </a>
-          <a href="https://linkedin.com/in/giacomogonella" target="_blank">
-            <img src="images/svgs/linkedin.svg" alt="LinkedIn" />
-          </a>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="#top" class="brand">Giacomo Gonella</a>
+        <div class="nav-links">
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+          <a href="assets/cv.pdf" class="btn btn-cv" target="_blank" rel="noopener">CV</a>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
 
-    <!-- Right Column -->
-    <div class="right">
-      <h2>About Me</h2>
-      <p>
-        I am a PhD student in Information Engineering and Computer Science at the University of Trento, working in collaboration with Fondazione Bruno Kessler. 
-        I earned my BSc in Information Engineering and my MSc in Computer Engineering from the University of Padua, where I completed a thesis on the exploration of Vision-Language Models (VLMs) under the supervision of Prof. Giorgio Satta and Prof. Loris Nanni.
-      </p>
-      <p>
-        My current research investigates crisis communication through Natural Language Generation, moving from broad, general messages to more precise and personalized communication.
-      </p>
-
-      <h2>Education</h2>
-      <ul class="timeline">
-        <li>
-          <h3>PhD in Information Engineering and Computer Science</h3>
-          <span>DISI, University of Trento (Present)</span>
-          <p>Specializing in NLP and NLG for Crisis/Emergency Management.</p>
-        </li>
-        <li>
-          <h3>MS in Computer Engineering - AI &amp; Robotics</h3>
-          <span>DEI, University of Padova (2024)</span>
-          <p>Focused on advanced AI topics and robotics.</p>
-        </li>
-        <li>
-          <h3>BS in Information Engineering</h3>
-          <span>DEI, University of Padova (2021)</span>
-          <p>Gained foundational knowledge in computer science and engineering principles.</p>
-        </li>
-      </ul>
-
-      <h2>Publications</h2>
-      <ul class="pub-list">
-        <li class="pub-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/abs/2510.09243" target="_blank" rel="noopener">
-              CrisiText: A dataset of warning messages for LLM training in emergency communication
+    <main id="top">
+      <!-- Intro / About -->
+      <section class="hero">
+        <img src="images/avatar.jpg" alt="Portrait of Giacomo Gonella" class="avatar" />
+        <div class="hero-text">
+          <h1>Giacomo Gonella</h1>
+          <p class="role">
+            PhD Student · Fondazione Bruno Kessler &amp; DISI, University of Trento
+          </p>
+          <div class="contact-row">
+            <a class="email" href="mailto:ggonella@fbk.eu">ggonella@fbk.eu</a>
+            <span class="contact-sep" aria-hidden="true"></span>
+            <div class="social-icons">
+            <a href="https://x.com/giacogon" target="_blank" rel="noopener" aria-label="X">
+              <img src="images/svgs/x.svg" alt="X" />
             </a>
+            <a href="https://bsky.app/profile/ggonella" target="_blank" rel="noopener" aria-label="Bluesky">
+              <img src="images/svgs/bluesky.svg" alt="Bluesky" />
+            </a>
+            <a href="https://github.com/giacomogonella" target="_blank" rel="noopener" aria-label="GitHub">
+              <img src="images/svgs/github.svg" alt="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/giacomogonella" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="images/svgs/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://orcid.org/0009-0009-5663-0646" target="_blank" rel="noopener" aria-label="ORCID">
+              <img src="images/svgs/orcid.svg" alt="ORCID" />
+            </a>
+            <a href="https://scholar.google.com/citations?user=OBEZneYAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <img src="images/svgs/scholar.svg" alt="Google Scholar" />
+            </a>
+            </div>
           </div>
-          <div class="pub-authors">
-            <strong>Giacomo Gonella</strong>, Gian Maria Campedelli, Stefano Menini, Marco Guerini
-          </div>
-          <div class="pub-meta">
-            arXiv preprint • arXiv:2510.09243 • 2025
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </div>
+      </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>© 2025 Giacomo Gonella. All rights reserved.</p>
-    <p>Opinions expressed on this website are my own and do not necessarily reflect those of my institution.</p>
-    <p id="last-updated"></p>
-    <p><a href="#">↑ Back to Top</a></p>
-  </footer>
+      <section class="about">
+        <p>
+          I am a PhD student in Information Engineering and Computer Science based at
+          Fondazione Bruno Kessler, in collaboration with the University of Trento.
+          My research investigates crisis communication through Natural Language
+          Generation, moving from broad, general messages to more precise and
+          personalized communication.
+        </p>
+        <p>
+          Previously, I earned my BSc in Information Engineering and my MSc in Computer
+          Engineering from the University of Padua, where I completed a thesis on the
+          exploration of Vision-Language Models (VLMs) under the supervision of
+          Prof.&nbsp;Giorgio Satta and Prof.&nbsp;Loris Nanni.
+        </p>
+      </section>
 
-  <!-- JavaScript to Auto-Update the Last Updated Date -->
-  <script>
-    document.getElementById("last-updated").innerText = "Last updated: " + new Date().toLocaleDateString();
-  </script>
-</body>
+      <!-- News -->
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">Jun 2026</span>
+            <span class="news-body">
+              New preprint on arXiv:
+              <a href="https://arxiv.org/abs/2606.09428" target="_blank" rel="noopener">Guide Me Out</a>,
+              a framework to benchmark VLM operators communication in crisis scenarios.
+            </span>
+          </li>
+          <li>
+            <span class="news-date">Mar 2026</span>
+            <span class="news-body">
+              <a href="https://aclanthology.org/2026.findings-eacl.350/" target="_blank" rel="noopener">CrisiText</a>
+              was published in Findings of EACL 2026 and presented in Rabat, Morocco.
+            </span>
+          </li>
+          <li>
+            <span class="news-date">Oct 2025</span>
+            <span class="news-body">
+              The <a href="https://arxiv.org/abs/2510.09243" target="_blank" rel="noopener">CrisiText</a>
+              preprint is out on arXiv: a dataset of warning messages for LLM training
+              in emergency communication.
+            </span>
+          </li>
+          <li>
+            <span class="news-date">Nov 2024</span>
+            <span class="news-body">
+              Started my PhD at Fondazione Bruno Kessler, in collaboration with
+              DISI, University of Trento.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">
+              Guide Me Out: A Framework to Benchmark VLM Operators Communication in
+              Crisis Scenarios <span class="venue-badge">Preprint</span>
+            </div>
+            <div class="pub-authors">
+              <strong>Giacomo Gonella</strong>, Stefano Menini, Marco Guerini
+            </div>
+            <div class="pub-meta">
+              <em>arXiv preprint</em> arXiv:2606.09428, 2026.
+            </div>
+            <div class="pub-links">
+              <a class="btn" href="https://arxiv.org/abs/2606.09428" target="_blank" rel="noopener">Paper</a>
+              <button class="btn bibtex-toggle" type="button" aria-expanded="false">BibTeX</button>
+            </div>
+            <div class="bibtex-box" hidden>
+              <pre><code>@misc{gonella2026guidemeout,
+  title={Guide Me Out: A Framework to Benchmark VLM Operators Communication in Crisis Scenarios},
+  author={Giacomo Gonella and Stefano Menini and Marco Guerini},
+  year={2026},
+  eprint={2606.09428},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}</code></pre>
+              <button class="btn copy-btn" type="button">Copy</button>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">
+              CrisiText: A dataset of warning messages for LLM training in emergency
+              communication <span class="venue-badge venue-conf">EACL 2026</span>
+            </div>
+            <div class="pub-authors">
+              <strong>Giacomo Gonella</strong>, Gian Maria Campedelli, Stefano Menini,
+              Marco Guerini
+            </div>
+            <div class="pub-meta">
+              In <em>Findings of ACL: EACL 2026</em>, pp.&nbsp;6657–6677, Rabat, Morocco. ACL.
+            </div>
+            <div class="pub-links">
+              <a class="btn" href="https://aclanthology.org/2026.findings-eacl.350/" target="_blank" rel="noopener">Paper</a>
+              <a class="btn" href="posters/crisitext-poster.pdf" target="_blank" rel="noopener">Poster</a>
+              <button class="btn bibtex-toggle" type="button" aria-expanded="false">BibTeX</button>
+            </div>
+            <div class="bibtex-box" hidden>
+              <pre><code>@inproceedings{gonella-etal-2026-crisitext,
+  title = "{C}risi{T}ext: A dataset of warning messages for {LLM} training in emergency communication",
+  author = "Gonella, Giacomo and Campedelli, Gian Maria and Menini, Stefano and Guerini, Marco",
+  booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026",
+  month = mar,
+  year = "2026",
+  address = "Rabat, Morocco",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2026.findings-eacl.350/",
+  doi = "10.18653/v1/2026.findings-eacl.350",
+  pages = "6657--6677"
+}</code></pre>
+              <button class="btn copy-btn" type="button">Copy</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <ul class="timeline">
+          <li>
+            <h3>PhD in Information Engineering and Computer Science</h3>
+            <span class="timeline-meta">Fondazione Bruno Kessler &amp; DISI, University of Trento · 2024 — present</span>
+            <p>Specializing in NLP and NLG for Crisis/Emergency Management.</p>
+          </li>
+          <li>
+            <h3>MSc in Computer Engineering — AI &amp; Robotics</h3>
+            <span class="timeline-meta">DEI, University of Padua · 2024</span>
+            <p>Focused on advanced AI topics and robotics.</p>
+          </li>
+          <li>
+            <h3>BSc in Information Engineering</h3>
+            <span class="timeline-meta">DEI, University of Padua · 2021</span>
+            <p>Gained foundational knowledge in computer science and engineering principles.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Giacomo Gonella</p>
+      <p>
+        Opinions expressed on this website are my own and do not necessarily reflect
+        those of my institution.
+      </p>
+      <p><a href="#top">↑ Back to top</a></p>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".bibtex-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const box = btn.closest(".pub-links").nextElementSibling;
+          const willOpen = box.hidden;
+          box.hidden = !willOpen;
+          btn.classList.toggle("open", willOpen);
+          btn.setAttribute("aria-expanded", willOpen);
+        });
+      });
+
+      document.querySelectorAll(".copy-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const code = btn.parentElement.querySelector("code").innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            btn.textContent = "Copied!";
+            setTimeout(() => (btn.textContent = "Copy"), 1500);
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

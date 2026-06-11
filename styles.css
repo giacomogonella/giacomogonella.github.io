@@ -1,235 +1,442 @@
-/* Fonts & Basic Resets */
+/* ---------- Variables & resets ---------- */
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-faint: #777;
+  --paper: #fdfdfc;
+  --accent: #1f6f78;
+  --accent-dark: #16545b;
+  --hairline: rgba(0, 0, 0, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%; /* ensures full height if needed */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* keep anchored sections clear of the sticky nav */
 }
 
 body {
   font-family: "Inter", sans-serif;
-  /* Changed background color to white to avoid color split */
-  background-color: #fff;
-  color: #333;
-  /* no extra margin/padding on body */
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
 }
 
-/* Container */
-.container {
-  display: flex;
-  width: 100%;
-  background: #fff;
-  padding: 40px;
-  /* container is naturally as tall as content; 
-     you could also do min-height: 100vh; if you want it to fill the screen */
+h1,
+h2,
+h3 {
+  font-family: "Newsreader", serif;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
-/* Left Column */
-.left {
-  width: 20%;
-  text-align: center;
-  padding: 0 20px;
-  border-right: 2px solid #ddd;
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(253, 253, 252, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.site-nav {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(51, 51, 51, 0.3); /* Soft dark gray shadow */
+.brand {
+  font-family: "Newsreader", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
 }
 
-/* Contact Section */
-.contact {
-  /* Removed margin-top: auto to keep Contact below PhD Student */
-  margin-top: 1rem; /* you can adjust spacing here as desired */
+.brand:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
 }
 
-/* Social Icons in a Row */
-.social-icons {
-  display: flex;
-  flex-wrap: wrap; /* Allows icons to move to a new line if needed */
-  justify-content: center;
-  gap: 0.8rem; /* Adjust spacing between icons */
-  max-width: 100%; /* Ensures they don't overflow */
+.nav-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
 }
 
-.social-icons a {
-  display: inline-block;
-  transition: transform 0.2s ease;
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
 }
 
-.social-icons a:hover {
-  transform: scale(1.1);
+/* ---------- Layout ---------- */
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
 }
 
-.social-icons img {
-  width: 28px; 
-  height: 28px;
-}
-
-/* Right Column */
-.right {
-  /* max-width to improve readability (limit line length) */
-  width: 80%;
-  max-width: 700px; 
-  padding-left: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Headings */
-h1 {
-  font-size: 1.8rem;
-  margin-top: 0.5rem;
+section {
+  margin-bottom: 3rem;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--hairline);
 }
 
-/* Paragraphs: increase line-height for readability */
-p {
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.role {
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.email {
+  font-size: 0.95rem;
+}
+
+.contact-sep {
+  width: 1px;
+  height: 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.about p + p {
+  margin-top: 1rem;
+}
+
+/* ---------- Social icons ---------- */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  opacity: 0.85;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.social-icons img {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-cv {
+  color: #fff !important;
+  background: var(--accent);
+}
+
+.btn-cv:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+/* ---------- News ---------- */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 5.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-faint);
+  padding-top: 0.1rem;
+}
+
+/* ---------- Publications & posters ---------- */
+.pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-family: "Newsreader", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.pub-authors {
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.pub-meta {
+  margin-top: 0.3rem;
+  font-size: 0.88rem;
+  color: var(--ink-faint);
+}
+
+/* Venue badge, shown inline after the paper title */
+.venue-badge {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
   line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ink-soft);
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  padding: 0.05rem 0.45rem;
+  margin-left: 0.25rem;
+  vertical-align: 0.15em;
 }
 
-/* New Bullet Timeline Styles */
+.venue-conf {
+  color: #fff;
+  background: var(--accent);
+}
+
+.pub-links {
+  margin-top: 0.55rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* BibTeX expander */
+.bibtex-toggle.open {
+  background: var(--accent);
+  color: #fff;
+}
+
+.bibtex-box {
+  position: relative;
+  margin-top: 0.6rem;
+  background: #f4f4f2;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  max-width: 100%;
+}
+
+.bibtex-box pre {
+  overflow-x: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: var(--paper);
+}
+
+/* ---------- Education timeline ---------- */
 .timeline {
   position: relative;
-  list-style-type: none;
-  max-width: 600px;
-  margin: 0;
-  padding: 0 20px;
+  list-style: none;
+  padding-left: 1.6rem;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 20px; 
-  top: 0;
+  left: 0.3rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
   width: 2px;
-  background-color: #ccc;
-  height: 100%;
+  background-color: var(--hairline);
 }
 
 .timeline li {
   position: relative;
-  margin: 20px 0;
-  padding-left: 40px;
+  padding-bottom: 1.4rem;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
 }
 
 .timeline li::before {
-  content: "●";
+  content: "";
   position: absolute;
-  left: 12px; 
-  font-size: 18px;
-  color: #333;
-  top: 0;
-  transform: translateY(0%);
+  left: -1.6rem;
+  top: 0.45rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background-color: var(--accent);
 }
 
-.timeline li h3 {
-  margin: 0;
+.timeline h3 {
   font-size: 1.1rem;
-  color: #333;
 }
 
-.timeline li span {
+.timeline-meta {
   display: block;
-  font-size: 0.9rem;
-  color: #555;
-  margin: 5px 0;
+  font-size: 0.88rem;
+  color: var(--ink-faint);
+  margin: 0.15rem 0 0.3rem;
 }
 
-.timeline li p {
-  margin-top: 5px;
+.timeline p {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--ink-soft);
 }
 
-/* Responsive Design (Mobile) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    padding: 0;
-    border-right: none;
-  }
-
-  .left {
-    margin-bottom: 2rem;
-  }
-
-  .timeline {
-    padding-left: 20px;
-  }
-}
-
+/* ---------- Footer ---------- */
 footer {
+  border-top: 1px solid var(--hairline);
   text-align: center;
-  padding: 20px;
-  color: #333;
-  font-size: 0.9rem;
-  margin-top: 40px;
+  padding: 1.8rem 1.5rem 2.2rem;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
 }
 
-footer a {
-  color: #0073e6;
-  text-decoration: none;
-  font-weight: 600;
+footer p + p {
+  margin-top: 0.3rem;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  main {
+    padding-top: 2rem;
+  }
 
-.pub-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
 
-.pub-item {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
+  .social-icons,
+  .contact-row {
+    justify-content: center;
+  }
 
-.pub-title a {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: #000;
-  text-decoration: none;
-}
+  .hero-text h1 {
+    font-size: 2rem;
+  }
 
-.pub-title a:hover {
-  text-decoration: underline;
-}
+  .site-nav {
+    justify-content: center;
+  }
 
-.pub-authors {
-  margin-top: 0.25rem;
-  color: #555;
-}
+  .nav-links {
+    justify-content: center;
+  }
 
-.pub-meta {
-  margin-top: 0.25rem;
-  font-size: 0.95rem;
-  color: #666;
+  .news-list li {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .news-date {
+    width: auto;
+  }
 }
